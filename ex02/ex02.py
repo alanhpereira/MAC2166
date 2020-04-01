@@ -3,12 +3,21 @@ def main() :
 	n = int(input())
 	i = int(input())
 	j = int(input())
-	atual = 0	#número para conferir multilicipidade
+	mi=0		#multiplos de i
+	mj=0		#multiplos de j
 	cont = 0	#contagem de números multiplos de i ou j
 	while cont<n:
-		if atual % i == 0 or atual % j == 0:
-			print(atual)
-			cont = cont + 1
-		atual = atual + 1
-
+		
+		if mi < mj:
+			print(mi)
+			mi += i
+		elif mj < mi:
+			print(mj)
+			mj += j
+		else:	#caso nenhum dos dois forem menores que o outro, são iguais
+			print(mi)
+			mi += i
+			mj += j
+			
+		cont +=1
 main()
