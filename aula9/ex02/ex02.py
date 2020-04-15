@@ -2,6 +2,8 @@
 #confere se um número é primo
 def primo(n):
 	i=2
+	if(n <= 1):
+		return False
 	while i*i <= n: #confere só a até a raiz qdd de n
 		if(n % i == 0):
 			return False
