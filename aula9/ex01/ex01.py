@@ -11,7 +11,7 @@ def binomial(n,k):
 def triangulo(n):
 	for i in range(0,n):
 		for j in range(0,i+1):
-			print(binomial(i,j),end=" ")
+			print("%5d "%binomial(i,j),end="")
 		print()
 
 def main():
